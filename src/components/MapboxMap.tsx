@@ -17,8 +17,13 @@ export default function MapboxMap({ locations, activeLocationId, onLocationSelec
   const [clickCount, setClickCount] = useState(0);
 
   useEffect(() => {
+    if (!locations || !Array.isArray(locations)) return;
     const activeLoc = locations.find((l: any) => l.id === activeLocationId);
-    if (activeLoc && activeLoc.lat && activeLoc.lng) {
+    if (
+      activeLoc &&
+      typeof activeLoc.lat === 'number' && !isNaN(activeLoc.lat) &&
+      typeof activeLoc.lng === 'number' && !isNaN(activeLoc.lng)
+    ) {
       mapRef.current?.flyTo({
         center: [activeLoc.lng, activeLoc.lat],
         zoom: 14,
@@ -39,6 +44,37 @@ export default function MapboxMap({ locations, activeLocationId, onLocationSelec
       });
     }
   };
+
+  if (!MAPBOX_TOKEN) {
+    return (
+      <div
+        style={{
+          width: '100%',
+          height: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          padding: '2rem',
+          textAlign: 'center',
+          background: 'rgba(42, 26, 74, 0.05)',
+          borderRadius: '24px',
+          border: '1px dashed rgba(42, 26, 74, 0.2)',
+          color: '#2a1a4a'
+        }}
+      >
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ marginBottom: '1rem', opacity: 0.8 }}>
+          <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6" />
+          <line x1="8" y1="2" x2="8" y2="18" />
+          <line x1="16" y1="6" x2="16" y2="22" />
+        </svg>
+        <h3 style={{ margin: '0 0 0.5rem 0', fontSize: '1.25rem', fontWeight: 700 }}>Mapbox Token Required</h3>
+        <p style={{ margin: 0, fontSize: '0.95rem', opacity: 0.8, maxWidth: '420px', lineHeight: 1.5 }}>
+          Please add <code>NEXT_PUBLIC_MAPBOX_TOKEN</code> to your <code>.env.local</code> file to enable the interactive map.
+        </p>
+      </div>
+    );
+  }
 
   return (
     <Map
