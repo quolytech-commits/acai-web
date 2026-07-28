@@ -1,0 +1,184 @@
+.biz-page {
+  background: var(--color-bg);
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: 20vh 0 12vh;
+}
+
+.biz-hero {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 4rem;
+  padding: 0 1.5rem;
+}
+
+.biz-hero .tag {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-linen);
+  background: var(--color-amethyst);
+  padding: 0.5rem 1rem;
+  border-radius: 100px;
+  margin-bottom: 1.5rem;
+}
+
+.biz-hero h1 {
+  color: #fff;
+  font-size: 3.2rem;
+  margin-bottom: 1.25rem;
+}
+
+.biz-hero p {
+  font-size: 1.15rem;
+  color: rgba(253, 241, 226, 0.8);
+  line-height: 1.8;
+}
+
+.biz-features {
+  max-width: 900px;
+  margin: 0 auto 5rem;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.biz-feature {
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(253, 241, 226, 0.1);
+}
+
+.biz-feature:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.biz-feature-num {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: var(--color-amethyst);
+  opacity: 0.7;
+  line-height: 1;
+  margin-top: -0.2rem;
+}
+
+.biz-feature-content h3 {
+  color: var(--color-linen);
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.biz-feature-content p {
+  color: rgba(253, 241, 226, 0.7);
+  line-height: 1.7;
+  font-size: 1.05rem;
+  margin: 0;
+  max-width: 600px;
+}
+
+.biz-section {
+  max-width: 780px;
+  margin: 0 auto 3rem;
+  padding: 0 1.5rem;
+}
+
+.biz-section h2 {
+  color: var(--color-amethyst);
+  font-size: 1.6rem;
+  margin-bottom: 1.25rem;
+}
+
+.biz-section p {
+  color: rgba(253, 241, 226, 0.8);
+  line-height: 1.8;
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+}
+
+.biz-list {
+  padding-left: 1.5rem;
+}
+
+.biz-list li {
+  color: rgba(253, 241, 226, 0.8);
+  line-height: 1.8;
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+}
+
+.biz-cta {
+  max-width: 780px;
+  margin: 4rem auto 0;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.biz-cta p {
+  color: rgba(253, 241, 226, 0.7);
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+}
+
+/* Job listings (careers page) */
+
+.job-list {
+  max-width: 780px;
+  margin: 0 auto 3rem;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.job-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(253, 241, 226, 0.1);
+  border-radius: 20px;
+  padding: 1.75rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.job-card .job-info h3 {
+  color: var(--color-linen);
+  font-size: 1.15rem;
+  margin-bottom: 0.4rem;
+}
+
+.job-card .job-info .job-meta {
+  color: var(--color-amethyst);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+@media (max-width: 900px) {
+  .biz-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .biz-hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .biz-feature {
+    gap: 1.25rem;
+  }
+
+  .biz-feature-num {
+    font-size: 1.8rem;
+  }
+}

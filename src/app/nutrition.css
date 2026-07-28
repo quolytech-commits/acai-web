@@ -1,0 +1,108 @@
+.nutrition-page {
+  background: var(--color-bg);
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: 20vh 0 12vh;
+}
+
+.nutrition-hero {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 4rem;
+  padding: 0 1.5rem;
+}
+
+.nutrition-hero h1 {
+  font-family: var(--font-brazil);
+  color: var(--color-amethyst);
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.nutrition-hero p {
+  font-size: 1.15rem;
+  color: rgba(253, 241, 226, 0.8);
+  line-height: 1.8;
+}
+
+.nutrition-table-wrap {
+  max-width: 1100px;
+  margin: 0 auto 4rem;
+  padding: 0 1.5rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.nutrition-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 720px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(253, 241, 226, 0.12);
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.nutrition-table th,
+.nutrition-table td {
+  text-align: left;
+  padding: 1.1rem 1.25rem;
+  font-size: 0.98rem;
+  color: rgba(253, 241, 226, 0.85);
+  border-bottom: 1px solid rgba(253, 241, 226, 0.08);
+}
+
+.nutrition-table th {
+  font-family: var(--font-heading);
+  color: var(--color-linen);
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  background: rgba(171, 146, 191, 0.12);
+}
+
+.nutrition-table tr:last-child td {
+  border-bottom: none;
+}
+
+.nutrition-table td.item-name {
+  color: var(--color-linen);
+  font-weight: 600;
+}
+
+.nutrition-note {
+  max-width: 860px;
+  margin: 0 auto 4rem;
+  padding: 0 1.5rem;
+  color: rgba(253, 241, 226, 0.7);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.allergen-legend {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.allergen-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 100px;
+  border: 1px solid rgba(253, 241, 226, 0.2);
+  color: rgba(253, 241, 226, 0.8);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .nutrition-hero h1 {
+    font-size: 2.6rem;
+  }
+}
