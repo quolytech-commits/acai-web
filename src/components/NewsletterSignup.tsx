@@ -36,7 +36,7 @@ export default function NewsletterSignup() {
   }
 
   return (
-    <form className="newsletter-form" onSubmit={handleSubmit}>
+    <form className="newsletter-form" onSubmit={handleSubmit} style={{ boxSizing: 'border-box', width: '100%', maxWidth: '340px', margin: '0 auto' }}>
       <input
         type="email"
         name="email"
@@ -46,9 +46,16 @@ export default function NewsletterSignup() {
         onChange={(e) => setEmail(e.target.value)}
         className="newsletter-input"
         aria-label="Email address"
+        style={{ boxSizing: 'border-box' }}
         suppressHydrationWarning
       />
-      <button type="submit" className="newsletter-btn" disabled={status === 'submitting'} suppressHydrationWarning>
+      <button 
+        type="submit" 
+        className="newsletter-btn" 
+        disabled={status === 'submitting'} 
+        style={{ boxSizing: 'border-box' }}
+        suppressHydrationWarning
+      >
         {status === 'submitting' ? 'Joining…' : 'Join'}
       </button>
     </form>

@@ -488,7 +488,7 @@ a {
 }
 
 /* Universal Footer Mobile Centering Overrides */
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   footer.footer-wrapper,
   .footer-container-inner,
   .footer-content,

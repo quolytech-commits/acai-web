@@ -428,7 +428,7 @@
 }
 
 /* Responsive adjustments */
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .footer-container-inner {
     border-top-left-radius: 40px !important;
     border-top-right-radius: 40px !important;
