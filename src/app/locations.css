@@ -126,137 +126,129 @@
   }
 }
 
-/* Stats Section - Updated colors */
+/* Stats Section - Guaranteed Single Row Layout */
 .stats-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8rem;
-  margin: 4rem 0 6rem 0;
-  flex-wrap: wrap;
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-around !important;
+  align-items: center !important;
+  gap: clamp(0.5rem, 3vw, 4rem) !important;
+  margin: 3rem 0 5rem 0 !important;
+  flex-wrap: nowrap !important;
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 .stat-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+  flex: 1 !important;
+  min-width: 0 !important;
 }
 
 .stat-icon {
   color: var(--color-energy);
-  /* Replaced orange with website var */
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .stat-number {
   font-family: inherit;
-  font-size: 5.5rem;
+  font-size: clamp(2rem, 5.5vw, 5.5rem);
   font-weight: 800;
   color: var(--color-text);
   line-height: 1;
   margin-bottom: 0.5rem;
   display: flex;
   align-items: baseline;
+  white-space: nowrap;
 }
 
 .stat-number span {
-  font-size: 3.5rem;
+  font-size: clamp(1.3rem, 3.5vw, 3.5rem);
   font-weight: 700;
   margin-right: 0.2rem;
   color: var(--color-energy);
-  /* Give the + sign the brand color */
 }
 
 .stat-divider {
-  width: 40px;
+  width: clamp(20px, 3vw, 40px);
   height: 3px;
   background-color: var(--color-energy);
-  /* Replaced orange with website var */
-  margin: 1.5rem 0;
+  margin: 1rem 0;
   border-radius: 2px;
 }
 
 .stat-label {
-  font-size: 0.95rem;
+  font-size: clamp(0.65rem, 1.5vw, 0.95rem);
   letter-spacing: 0.05em;
-  /* Reduced letter spacing */
   color: var(--color-text-muted);
   font-weight: 500;
   text-transform: uppercase;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .stats-section {
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    align-items: center;
-    gap: 0.5rem;
-    margin: 2.5rem 0 3.5rem 0;
-    width: 100%;
-    padding: 0 0.5rem;
-  }
-
-  .stat-item {
-    flex: 1;
-    min-width: 0;
+    gap: 0.5rem !important;
+    margin: 2.5rem 0 3.5rem 0 !important;
+    padding: 0 0.5rem !important;
   }
 
   .stat-icon {
-    width: 26px;
-    height: 26px;
-    margin-bottom: 0.5rem;
+    width: 26px !important;
+    height: 26px !important;
+    margin-bottom: 0.5rem !important;
   }
 
   .stat-number {
-    font-size: 2rem;
-    margin-bottom: 0.2rem;
-    white-space: nowrap;
+    font-size: 2rem !important;
+    margin-bottom: 0.2rem !important;
   }
 
   .stat-number span {
-    font-size: 1.3rem;
-    margin-right: 0.1rem;
+    font-size: 1.3rem !important;
   }
 
   .stat-divider {
-    width: 24px;
-    height: 2px;
-    margin: 0.5rem 0;
+    width: 24px !important;
+    height: 2px !important;
+    margin: 0.5rem 0 !important;
   }
 
   .stat-label {
-    font-size: 0.7rem;
-    letter-spacing: 0.03em;
+    font-size: 0.7rem !important;
   }
 }
 
 @media (max-width: 480px) {
   .stats-section {
-    gap: 0.25rem;
-    margin: 2rem 0 3rem 0;
+    gap: 0.25rem !important;
+    margin: 2rem 0 3rem 0 !important;
   }
 
   .stat-icon {
-    width: 22px;
-    height: 22px;
-    margin-bottom: 0.4rem;
+    width: 22px !important;
+    height: 22px !important;
+    margin-bottom: 0.4rem !important;
   }
 
   .stat-number {
-    font-size: 1.75rem;
+    font-size: 1.65rem !important;
   }
 
   .stat-number span {
-    font-size: 1.15rem;
+    font-size: 1.1rem !important;
   }
 
   .stat-divider {
-    width: 18px;
-    margin: 0.4rem 0;
+    width: 18px !important;
+    margin: 0.4rem 0 !important;
   }
 
   .stat-label {
-    font-size: 0.65rem;
+    font-size: 0.65rem !important;
   }
 }

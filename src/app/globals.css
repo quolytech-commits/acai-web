@@ -637,3 +637,85 @@ a {
     text-align: center !important;
   }
 }
+
+/* Global Enforcement for Stats Section - Single Horizontal Row */
+.stats-section {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-around !important;
+  align-items: center !important;
+  gap: clamp(0.25rem, 3vw, 4rem) !important;
+  flex-wrap: nowrap !important;
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.stat-item {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+  flex: 1 !important;
+  min-width: 0 !important;
+}
+
+@media (max-width: 1024px) {
+  .stats-section {
+    gap: 0.5rem !important;
+    flex-wrap: nowrap !important;
+  }
+
+  .stat-icon {
+    width: 26px !important;
+    height: 26px !important;
+  }
+
+  .stat-number {
+    font-size: 1.9rem !important;
+    white-space: nowrap !important;
+  }
+
+  .stat-number span {
+    font-size: 1.25rem !important;
+  }
+
+  .stat-divider {
+    width: 22px !important;
+    height: 2px !important;
+  }
+
+  .stat-label {
+    font-size: 0.7rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-section {
+    gap: 0.2rem !important;
+    flex-wrap: nowrap !important;
+  }
+
+  .stat-icon {
+    width: 22px !important;
+    height: 22px !important;
+  }
+
+  .stat-number {
+    font-size: 1.6rem !important;
+    white-space: nowrap !important;
+  }
+
+  .stat-number span {
+    font-size: 1.1rem !important;
+  }
+
+  .stat-divider {
+    width: 18px !important;
+  }
+
+  .stat-label {
+    font-size: 0.62rem !important;
+  }
+}
