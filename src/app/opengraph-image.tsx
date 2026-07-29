@@ -27,60 +27,83 @@ export default async function OpengraphImage() {
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          background: 'linear-gradient(135deg, #1A0B2E 0%, #3B2A56 50%, #655A7C 100%)',
-          padding: '60px',
+          backgroundColor: '#3B2A56',
+          backgroundImage: 'radial-gradient(circle at center, #554473 0%, #2A1B40 70%, #1A0B2E 100%)',
+          padding: '40px 60px',
         }}
       >
-        {logoBase64 ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
-            src={logoBase64}
-            alt="The Açaí Club Logo"
-            width="160"
-            height="160"
-            style={{
-              width: 160,
-              height: 160,
-              objectFit: 'contain',
-              marginBottom: 28,
-            }}
-          />
-        ) : null}
+        {/* Circle Badge Logo - matching website footer & nav design */}
         <div
           style={{
             display: 'flex',
-            fontSize: 68,
+            alignItems: 'center',
+            justifyContent: 'center',
+            width: 140,
+            height: 140,
+            borderRadius: 70,
+            backgroundColor: '#FDF1E2',
+            boxShadow: '0 10px 30px rgba(0, 0, 0, 0.4)',
+            marginBottom: 28,
+            overflow: 'hidden',
+          }}
+        >
+          {logoBase64 ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src={logoBase64}
+              alt="The Açaí Club Logo"
+              width="105"
+              height="105"
+              style={{
+                width: 105,
+                height: 105,
+                objectFit: 'contain',
+              }}
+            />
+          ) : null}
+        </div>
+
+        {/* Title */}
+        <div
+          style={{
+            display: 'flex',
+            fontSize: 64,
             fontWeight: 800,
             color: '#FDF1E2',
             textAlign: 'center',
             letterSpacing: '-0.02em',
+            lineHeight: 1.1,
           }}
         >
           {siteConfig.name}
         </div>
+
+        {/* Tagline */}
         <div
           style={{
             display: 'flex',
-            fontSize: 32,
+            fontSize: 28,
             color: 'rgba(253, 241, 226, 0.85)',
-            marginTop: 16,
+            marginTop: 14,
             textAlign: 'center',
           }}
         >
           {siteConfig.tagline}
         </div>
+
+        {/* Subtitle Badge */}
         <div
           style={{
             display: 'flex',
-            fontSize: 24,
+            fontSize: 20,
             color: '#AB92BF',
-            marginTop: 28,
+            marginTop: 24,
             letterSpacing: '0.12em',
             textTransform: 'uppercase',
             fontWeight: 600,
           }}
         >
-          Albania&apos;s Biggest Açaí Store · Tirana
+          ALBANIA&apos;S BIGGEST AÇAÍ STORE · TIRANA
         </div>
       </div>
     ),

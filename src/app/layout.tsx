@@ -76,12 +76,20 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     title: `${siteConfig.name} | Albania's Biggest Açaí Store, Tirana`,
     description: siteConfig.description,
-    // Image is generated automatically per-route via opengraph-image.tsx (1200x630).
+    images: [
+      {
+        url: `${siteConfig.url}/opengraph-image`,
+        width: 1200,
+        height: 630,
+        alt: `${siteConfig.name} | Albania's Biggest Açaí Store, Tirana`,
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: `${siteConfig.name} | Albania's Biggest Açaí Store, Tirana`,
     description: siteConfig.description,
+    images: [`${siteConfig.url}/opengraph-image`],
   },
   icons: {
     icon: '/favicon.ico?v=big',
