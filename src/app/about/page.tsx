@@ -66,8 +66,8 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="about-visual-content reveal-visual">
-             <div className="visual-image-box" style={{ padding: 0 }}>
-               <video src="/videos/acai-1.mp4" autoPlay loop muted playsInline preload="metadata" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+             <div className="visual-image-box" style={{ padding: 0, position: 'relative', overflow: 'hidden', minHeight: '350px' }}>
+               <Image src="/uploads/acai-image-1.jpg" alt="The Story of Açaí" fill sizes="(max-width: 900px) 90vw, 500px" style={{ objectFit: 'cover' }} />
              </div>
           </div>
         </div>
@@ -86,8 +86,8 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="about-visual-content reveal-visual">
-             <div className="visual-image-box" style={{ padding: 0 }}>
-               <video src="/videos/acai-2.mp4" autoPlay loop muted playsInline preload="metadata" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+             <div className="visual-image-box" style={{ padding: 0, position: 'relative', overflow: 'hidden', minHeight: '350px' }}>
+               <Image src="/uploads/acai-image-2.jpg" alt="Amazonian Roots" fill sizes="(max-width: 900px) 90vw, 500px" style={{ objectFit: 'cover' }} />
              </div>
           </div>
         </div>
@@ -109,8 +109,8 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="about-visual-content reveal-visual">
-             <div className="visual-image-box" style={{ padding: 0 }}>
-               <video src="/videos/acai-3.mp4" autoPlay loop muted playsInline preload="metadata" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+             <div className="visual-image-box" style={{ padding: 0, position: 'relative', overflow: 'hidden', minHeight: '350px' }}>
+               <Image src="/uploads/acai-image-3.jpg" alt="Crafted to Perfection" fill sizes="(max-width: 900px) 90vw, 500px" style={{ objectFit: 'cover' }} />
              </div>
           </div>
         </div>
