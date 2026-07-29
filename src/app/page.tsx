@@ -231,7 +231,9 @@ export default function Home() {
               fontFamily: 'var(--font-heading)',
               letterSpacing: '-0.02em',
               lineHeight: '1.1',
-              fontWeight: '500'
+              fontWeight: '500',
+              textAlign: 'center',
+              margin: '0 auto 0.8rem auto'
             }}>Visit Us</h2>
             <p style={{ color: 'var(--color-linen)', opacity: 0.8, fontSize: '1.1rem', maxWidth: '500px', margin: '0 auto', lineHeight: '1.6', fontWeight: '400' }}>
               Select a sanctuary across Tirana, Durrës, and the South Coast.

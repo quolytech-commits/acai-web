@@ -438,37 +438,122 @@
   .footer-container-inner {
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
+    padding: 5rem 1.5rem 2rem;
+    text-align: center;
+  }
+
+  .footer-center-text {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .footer-actions {
+    justify-content: center;
   }
   
   .footer-content {
     flex-direction: column;
+    align-items: center;
+    text-align: center;
     gap: 3rem;
   }
   
   .footer-left {
     flex-direction: column;
+    align-items: center;
+    text-align: center;
     gap: 2rem;
+    width: 100%;
+  }
+
+  .footer-contact {
+    text-align: center;
+    width: 100%;
+  }
+
+  .footer-contact h3, .footer-right h3, .footer-newsletter h3 {
+    text-align: center;
   }
 
   .footer-social-links {
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .footer-social-links a {
+    justify-content: center;
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  .footer-right {
+    min-width: auto;
+    width: 100%;
+    text-align: center;
   }
   
   .quick-links-grid {
     grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .footer-newsletter {
+    min-width: auto;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .footer-newsletter p {
-    max-width: none;
+    max-width: 320px;
+    margin: 0 auto 1.5rem auto;
+    text-align: center;
+  }
+
+  .newsletter-form {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: center;
+  }
+
+  .newsletter-input {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    padding: 0.85rem 1.2rem;
+  }
+
+  .newsletter-btn {
+    width: 100%;
+    max-width: 220px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.85rem 1.4rem;
   }
   
   .footer-bottom-row {
     flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.2rem;
+  }
+
+  .footer-copyright {
     text-align: center;
   }
-  
-  .footer-legal-pill {
-    flex-wrap: wrap;
+
+  .footer-legal-links {
     justify-content: center;
   }
 }

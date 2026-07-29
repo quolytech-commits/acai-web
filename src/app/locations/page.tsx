@@ -47,9 +47,9 @@ export default function LocationsPage() {
     <div className="container locations-page" ref={containerRef}>
       
       {/* 1. Header (Keep at top) */}
-      <div className="locations-header" style={{ marginBottom: '3rem', textAlign: 'center' }}>
-        <h1 className="hero-title" style={{ fontSize: 'clamp(3rem, 10vw, 5rem)', textTransform: 'none', transform: 'none' }}>Visit Us</h1>
-        <p style={{ color: 'var(--color-text-muted)', fontSize: '1.2rem', maxWidth: '500px', margin: '0 auto' }}>
+      <div className="locations-header" style={{ marginBottom: '3rem', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <h1 className="hero-title" style={{ fontSize: 'clamp(3rem, 10vw, 5rem)', textTransform: 'none', transform: 'none', textAlign: 'center', margin: '0 auto 1rem auto' }}>Visit Us</h1>
+        <p style={{ color: 'var(--color-text-muted)', fontSize: '1.2rem', maxWidth: '500px', margin: '0 auto', textAlign: 'center' }}>
           Find an Açaí Club location near you. Available in Tirana, Durrës, and across the South Coast.
         </p>
       </div>
