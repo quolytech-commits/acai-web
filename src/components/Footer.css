@@ -427,8 +427,8 @@
   }
 }
 
-/* Responsive adjustments */
-@media (max-width: 1200px) {
+/* Responsive adjustments - Mobile breakpoint (768px) */
+@media (max-width: 768px) {
   .footer-container-inner {
     border-top-left-radius: 40px !important;
     border-top-right-radius: 40px !important;
