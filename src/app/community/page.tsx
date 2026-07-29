@@ -10,96 +10,89 @@ const communitySlots = [
     id: 1,
     title: 'FRESH PREPARATION',
     tag: '#purebliss',
-    src: '/videos/acai-1.mp4',
-    type: 'video'
+    src: '/uploads/acai-image-1.jpg',
+    type: 'image'
   },
   {
     id: 2,
     title: 'TROPICAL VIBES',
     tag: '#acaibowl',
-    src: '/uploads/acai-image-1.jpg',
+    src: '/uploads/acai-image-2.jpg',
     type: 'image'
   },
   {
     id: 3,
     title: 'COMMUNITY LOVE',
     tag: '#theacaiclub',
-    src: '/uploads/acai-image-2.jpg',
+    src: '/uploads/acai-image-3.jpg',
     type: 'image'
   },
   {
     id: 4,
     title: 'FRESH INGREDIENTS',
     tag: '#theacaiclub',
-    src: '/uploads/acai-image-3.jpg',
+    src: '/uploads/acai-image-4.jpg',
     type: 'image'
   },
   {
     id: 5,
     title: 'SUMMER VIBES',
     tag: '#theacaiclub',
-    src: '/uploads/acai-image-4.jpg',
+    src: '/uploads/acai-image-5.jpg',
     type: 'image'
   },
   {
     id: 6,
     title: 'BOWL GOALS',
     tag: '#theacaiclub',
-    src: '/uploads/acai-image-5.jpg',
+    src: '/uploads/acai-image-6.jpg',
     type: 'image'
   },
   {
     id: 7,
     title: 'HEALTHY EATS',
     tag: '#theacaiclub',
-    src: '/uploads/acai-image-6.jpg',
+    src: '/uploads/acai-image-7.jpg',
     type: 'image'
   },
   {
     id: 8,
     title: 'AÇAI LOVERS',
     tag: '#theacaiclub',
-    src: '/uploads/acai-image-7.jpg',
+    src: '/uploads/acai-image-8.jpg',
     type: 'image'
   },
   {
     id: 9,
     title: 'DELICIOUS TREAT',
     tag: '#theacaiclub',
-    src: '/uploads/acai-image-8.jpg',
+    src: '/uploads/acai-image-9.jpg',
     type: 'image'
   },
   {
     id: 10,
     title: 'GOOD MORNING',
     tag: '#theacaiclub',
-    src: '/uploads/acai-image-9.jpg',
+    src: '/uploads/acai-image-10.jpg',
     type: 'image'
   },
   {
     id: 11,
     title: 'PERFECT BLEND',
     tag: '#theacaiclub',
-    src: '/uploads/acai-image-10.jpg',
+    src: '/uploads/acai-image-11.jpg',
     type: 'image'
   },
   {
     id: 12,
     title: 'COMMUNITY BOWL',
     tag: '#theacaiclub',
-    src: '/uploads/acai-image-11.jpg',
+    src: '/uploads/acai-image-12.jpg',
     type: 'image'
   },
   {
     id: 13,
     title: 'AÇAI LOVERS',
-    tag: '#theacaiclub',
-    src: '/uploads/acai-image-12.jpg',
-    type: 'image'
-  },
-  {
-    id: 14,
-    title: 'DELICIOUS TREAT',
     tag: '#theacaiclub',
     src: '/uploads/acai-image-13.jpg',
     type: 'image'
@@ -144,6 +137,9 @@ export default function CommunityPage() {
     return () => document.body.classList.remove('community-page-body');
   }, []);
 
+  const featuredImage = communitySlots[0];
+  const gridSlots = communitySlots.slice(1);
+
   return (
     <div className="community-page" style={{ paddingTop: '14vh' }}>
       <div className="community-header-section" style={{ paddingBottom: '3vh', textAlign: 'center' }}>
@@ -154,50 +150,42 @@ export default function CommunityPage() {
       </div>
 
       <div className="community-gallery-container container">
-        {/* Featured Hero Video Showcase */}
-        {communitySlots.filter(s => s.type === 'video').map(videoSlot => (
-          <div 
-            key={videoSlot.id} 
-            className="gallery-slot-card"
+        {/* Featured Hero Image Showcase */}
+        <div 
+          className="gallery-slot-card"
+          style={{
+            width: '100%',
+            maxWidth: '1200px',
+            margin: '0 auto 3.5rem auto',
+            borderRadius: '36px',
+            overflow: 'hidden',
+            background: 'transparent',
+            border: 'none',
+            boxShadow: '0 25px 60px rgba(0, 0, 0, 0.4)',
+            aspectRatio: '16 / 9',
+            minHeight: '380px',
+            maxHeight: '75vh',
+            position: 'relative'
+          }}
+        >
+          <Image
+            src={featuredImage.src}
+            alt={featuredImage.title}
+            fill
+            priority
+            sizes="(max-width: 1200px) 96vw, 1200px"
             style={{
-              width: '100%',
-              maxWidth: '1200px',
-              margin: '0 auto 3.5rem auto',
+              objectFit: 'cover',
               borderRadius: '36px',
-              overflow: 'hidden',
-              background: 'transparent',
-              border: 'none',
-              boxShadow: '0 25px 60px rgba(0, 0, 0, 0.4)',
-              aspectRatio: '16 / 9',
-              minHeight: '400px',
-              maxHeight: '75vh',
-              position: 'relative'
+              transition: 'transform 0.8s cubic-bezier(0.25, 1, 0.5, 1)'
             }}
-          >
-            <video
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="auto"
-              style={{
-                width: '100%',
-                height: '100%',
-                objectFit: 'cover',
-                display: 'block',
-                borderRadius: '36px',
-                transition: 'transform 0.8s cubic-bezier(0.25, 1, 0.5, 1)'
-              }}
-              className="slot-media-img"
-            >
-              <source src={videoSlot.src} type="video/mp4" />
-            </video>
-          </div>
-        ))}
+            className="slot-media-img"
+          />
+        </div>
 
         {/* Images Masonry Grid Below */}
         <div className="community-masonry-grid" style={{ alignItems: 'start' }}>
-          {communitySlots.filter(s => s.type !== 'video').map(slot => (
+          {gridSlots.map(slot => (
             <div 
               key={slot.id} 
               className="gallery-slot-card slot-vertical"
